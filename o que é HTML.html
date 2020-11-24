@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titulo da Pagina</title>
+</head>
+<body>
+    Conteúdo da página
+    <div class="footer"> -- Rodapé da página
+        FOOTER 
+    </div>
+</body>
+</html>
+
+
+
+O que é HTML?
+    HTML significa Hyper Text Markup Language
+    HTML é a linguagem de marcação padrão para a criação de páginas da web
+    HTML descreve a estrutura de uma página da web
+    HTML consiste em uma série de elementos
+    Os elementos HTML informam ao navegador como exibir o conteúdo
+    Os elementos HTML rotulam partes de conteúdo como "isto é um título", "isto é um parágrafo", "isto é um link", etc.
+
+
+Exemplo Explicado:
+
+    A <!DOCTYPE html>declaração define que este documento é um documento HTML5
+    O <html>elemento é o elemento raiz de uma página HTML
+    O <head>elemento contém metainformações sobre a página HTML
+    O <title>elemento especifica um título para a página HTML (que é mostrado na barra de título do navegador ou na guia da página)
+    O <body>elemento define o corpo do documento e é um contêiner para todo o conteúdo visível, como títulos, parágrafos, imagens, 
+    hiperlinks, tabelas, listas, etc.
+    O <h1>elemento define um grande título
+    O <p>elemento define um parágrafo
+
+        Estrutura Básica de uma página HTML
+
+        <html> </html>
+        º <html> Inicia o documento HTML, logo após a declaração, 
+        e </html> finaliza, sendo a última linha do arquivo.
+        
+        º Delimita a área onde serão colocados os marcadores HTML. Qualquer
+        marcador deve ficar entre <html> e </html>, para que o navegador consiga
+        interpretar e mostrar o resultado.
+        
+        <head> </head>
+        º Delimita a área de cabeçalho.
+        º O cabeçalho engloba marcadores de metadados, scripts, folhas de estilo,
+        títuloda página.
+        º Metadados
+            - informações adicionais sobre a página HTML.
+            - Codificação de caracteres, autor do documento, idioma, palavra chave.
+            - Importante para indexação das páginas pelos buscadores.
+        
+        <meta charset="utf-8"/>
+        º Utilizado dentro do marcador <head>
+        º Define a codificação dos caracteres que o navegador vai utilizar.
+        º Resolve problemas com acentuação.
+        
+        <link rel="favicon" charset="favicon.ico" />
+        º Utilizado dnetro do marcador <head>
+        º Define a pequena imagem que fica na aba do navegador.
+        º Um dos poucos marcadores dentro de <head> que define conteúdo visível para o usuario.
+        
+        <title> </title>
+        º Utilizado dentro do marcador <head>
+        º Define o título que aparecerá na janela ou aba do navegador.
+        º Um dos poucos marcadores dentro de <head> que define conteúdo visível para o usuario.
+        
+
+O que é um elemento HTML?
+
+Um elemento HTML é definido por uma tag inicial, algum conteúdo e uma tag final:
+< tagname > O conteúdo vai aqui ... < / tagname >
+
+O elemento HTML é tudo, desde a tag inicial até a tag final:
+< h1 > Meu primeiro título < / h1 >
+< p > Meu primeiro parágrafo. < / p > 
+
+
+A declaração <! DOCTYPE>
+
+A <!DOCTYPE>declaração representa o tipo de documento e ajuda os navegadores a exibir as páginas da web corretamente.
+Deve aparecer apenas uma vez, no topo da página (antes de quaisquer tags HTML).
+A <!DOCTYPE>declaração não diferencia maiúsculas de minúsculas.
+
+A <!DOCTYPE>declaração para HTML5 é:
+<!DOCTYPE html>
+
+
+Cabeçalhos HTML:
+
+Os cabeçalhos HTML são definidos com as tags:
+<h1></h1> ao <h6></h6>
+<h1>define o título mais importante
+<h6>define o título menos importante: 
+
+O <p>elemento define um parágrafo.
+Ele tem uma tag de início <p>e uma tag de fim </p>:
+
+<em></em> ou <i> </i> = Mostra o texto em itálico
+<strong></strong> ou <b> </b> = Monstra o texto negrito
+<br /> = Define uma quebra de linha, o texto após esse marcador é exibido
+na próxima linha, o marcador acima é um dos marcadores em que a abertura
+e fechamento estão apenas em um elemento (autocontidos).
+<a> </a> = Links(âncoras) Reconhecido em uma página por estar em cor diferente
+do resto do texto e, ao passar com o mouse sobre esse texto o cursos muda para uma
+mão apontando o link. E para ele funcionar, o marcador deve ser conter um atributo 
+('href'), que indica a URL destino ao clicar no link.
+O link pode ser para o recurso interno, do próprio website, ou uma referência
+para um website externo.
+O link pode referenciar qualquer recurso na web (html, arquivos e imagens).
+Ex: Referência a um recurso
+
+<a href="http://www.google.com.br"> externo </a>
+<br>
+<a href="pagina.html"> próprio website </a>
+
+Marcadores - Atributo ID:
+º Os marcadores HTML podem receber um atributo chamado (id). Este atributo
+identifica unicamente cada elemento da página HTML. Portanto, dois elementos
+não devem ter o mesmo (id). O valor do atributo (id) não deve conter espaços.
+EX:
+
+<ul id="lista_1">
+    <li id="item_1"> Item 1 </li>
+    <li id="item_2"> Item 2 </li>
+</ul>
+
+Caso dois elementos recebam o mesmo nome, não
+haverá erros ou problemas na formatação da página. O
+desenvolvedor terá problemas quando começar a
+trabalhar com JavaScript e CSS. Nestes casos, a
+inclusão de dois ou mais elementos com mesmo id pode
+levar a comportamento inesperado do website.
+• Os id são importantes principalmente para definir
+comportamento da página web, com JavaScript e
+estilos, com CSS
+• Outra funcionalidade de definir id é utilização com links.
+
+
+Marcadores de Media - Imagens 
+<img />
+º O marcador <img/> define uma região da página que contém uma imagem, este
+marcador deve conter o atributo (src), que indica a origem da imagem.
+º<img /> não tem marcador de fechamento.
+º A imagem pode estar armazenada no próprio site ou fazer referência
+a uma imagem da web. 
+
+<img src="local_da_imagem.jpg" /> - Podem ser utilizados JPG, GIF e PNG.
+
+º Outor atributos importantes:
+    - (alt): texto alternativo, caso a imagem não seja encontrada.
+    - (width): largura da imagem.
+    - (height): altura da imagem.
+
+º Para não perder a escala da imagem, pode-se definir apenas a largura ou a
+altura, e o navegador se encarrega de acertar o outro atributo automaticamente.
+
+
+Marcadores de Estrutura - Listas
+<ul><li></li></ul>
+
+º <ul> </ul> = Define uma lista não ordenada (ul = unordered list)
+º <li> </li> = Define um item da lista.
+º Item são precedidos por um "ponto"
+º A lista inicia sempre em uma nova linha.
+Ex: Lista comum
+<ul>
+    <li> Item um </li>
+    <li> Item dois </li>
+</ul>
+    º Item um
+    º Item Dois
+
+<ol><li></li></ol>
+º <ol> </ol> = Define uma lista não ordenada (ol = ordered list)
+º <li> </li> = Define um item da lista.
+º Item são precedidos por um número.
+º A lista inicia sempre em uma nova linha.
+Ex: Lista ordenada
+<ol>
+    <li> Item um </li>
+    <li> Item dois </li>
+</ol>
+    1. Item um
+    2. Item dois
+
+Marcadores de Estrutura - Tabelas
+<table>
+    <tr><th><td></td></th> </tr>
+</table>
+
+º <table> </table> = Delimitam o espaço de uma tabela.
+º <tr> </tr> = É utilizado dentro de <table></table>. Delimitam uma linha
+de uma tabela.
+º <td> </td> = É utilizado dentro de <tr> </tr>. Delimitam uma célula
+de uma tabela.
+º <th> </th> = É utilizado dentro de <tr> </tr>. Delimitam uma célula
+de cabeçalho de uma tabela.
+
+<table>
+    <tr>
+        <th>Cabeçalho 1</th>
+        <th> Cabeçalho 2</th>
+    </tr>
+    <tr>
+        <td>Cel 1-1</td>
+        <td>Cel 1-2</td>
+    </tr>
+    <tr>
+        <td>Cel 2-1</td>
+        <td>Cel 2-2</td>
+    </tr>
+</table>
+
+Cabeçalho1  Cabeçalho2
+Cel 1-1     Cel 1-2
+Cel 2-1     Cel 2-2
+
+
+Marcadores de Divisão em bloco:
+º Para montar divisões de página, usa-se o marcador <div></div>.
+º <div></div> = Não tem nenhuma atributo próprio nas versões mais 
+recentes do HTML. Normalmente usa-se os atributos globais (class e id).
+<div></div> existe apenas para aplicar um esitlo a uma zona da págna HTML.
+º Para formatação de <div></div> utilizam-se de estilo (CSS). Permite
+definir estilos sem associar a elementos estruturais do HTML.
+
+Marcadores de Divisão em linha:
+º Outro elemento utilizado para criar regiões em uma página HTML é o
+<span></span>.
+º A diferença entre <div> e <span> é o tipo de elemnto de cada um. Enquanto
+<div> é um elemento de bloco, <span> é um elemnento d elinha. Dessa forma
+a criação de um <span> não implica em uma nova linha.

@@ -1,0 +1,198 @@
+Formulários HTML:
+Um formulário HTML é usado para coletar a entrada do usuário. A entrada do 
+usuário geralmente é enviada a um servidor para processamento.
+
+•Ex: <form> Conteúdo </form>
+•Um formulário é composto basicamente de campos de
+coleta de dados (chamamos de inputs) e de etiquetas
+desses campos (chamamos de labels).
+
+
+Além dos campos, um formulário deve ter um botão de
+submissão (vamos ver adiante).
+
+•Podemos também dividir os campos do nosso formulário
+em categorias (ex: dados pessoais e dados de entrega),
+usando o fieldset.
+
+•Para usarmos o form precisamos definir as seguintes
+propriedades:
+
+– <action>: para onde o formulário deve enviar os dados.
+    Action:
+    •URL do servidor que irá receber esses dados para
+    processamento. Pode ser URL absoluta
+    (https://SERVIDOR/novoCliente) ou apenas relativa se for o
+    mesmo servidor (/novoCliente - preferível):
+
+– <method>: como o formulário deve enviar os dados.
+    Method:
+•Define o método HTTP utilizado para enviar os dados. Os
+valores possíveis são GET e POST, sendo o POST o mais
+adequado:
+
+– <enctype>: como o formulário deve empacotar os
+dados.
+    Enctype:
+    •Em geral, o formulário empacota os dados usando a
+    codificação de URL (application/x-www-form-urlencoded).
+    Essa maneira já converte caracteres diferentes antes de
+    enviar. Por exemplo:
+    •Existe a opção multipart/form-data onde essa conversão
+    não ocorre. Usamos essa opção quando há arquivos no
+    formulário.
+
+– <name>: um nome para identificar o formulário no JS.
+
+
+Formulários - Campos (inputs)
+    O HTML5 apresentou vários novos campos a serem usados.
+    Vamos ver primeiro os principais a serem utilizados.
+    • Praticamente todo campo no HTML é identificado pela tag
+    input. Essa tag não possui tag de fechamento:
+    <input name=“nome” />
+    • Os campos do HTML podem ser separados em:
+    ▪ Coleta de texto (com exceção do tipo arquivo!).
+    ▪ Coleta de opções.
+    ▪ Botões de controle.
+
+        •Os inputs possuem vários atributo, alguns que
+    dependem do tipo inclusive. Vamos apresentar os mais
+    importantes.
+        •São dois atributos obrigatórios: name e type
+        – <type>: indica o tipo do atributo (ex: text ou checkbox)
+        – <name>: indica o nome do atributo que o conteúdo do
+         input irá enviar. Por exemplo, no campo com nome
+         primeiroNome, se digitarmos Diego e enviarmos o
+         formulário, o corpo da requisição vai como
+         primeiroNome=Diego.
+
+Formulários - Campos - Propriedades:
+    • Outras propriedades:
+
+     – <value>: indica um valor inicial ao campo, ou a uma seleção.
+     – <readonly>: indica que o campo está como leitura apenas.
+     – <disabled>: indica que o campo não pode ser usado/enviado.
+     – <size>: indica o tamanho do campo em caracteres (texto).
+     – <maxlength>: indica o limite de caracteres que o campo permite
+        (texto).
+     – <min e max>: indica os valores máximo e mínimo do campo
+        (número e data)
+     – <multiple>: indica que pode escolher mais de um (seleção).
+     – <placeholder>: coloca um texto explicativo dentro do campo.
+     – <required>: indica que o campo é obrigatório (validação).
+
+Formulário - Campos - Texto Simples:
+    Input – Text
+    Tipo padrão de campo, feito para coletar textos de uma
+    única linha. Quando o input não declarar seu tipo, ele será
+    um text.
+        • Existem variações do campo de texto simples para diversos
+    tipos de dados. A maneira de definir no HTML é a mesma
+    (trocando apenas o type).
+    • Eles ajudam na validação automática do navegador, além
+    de alguns terem plugins nativos implementados, como o
+    campo datetime.
+
+    • Alguns desses novos campos são:
+    – <email>: campo texto que valida um e-mail.
+    – <number>: campo que aceita apenas números.
+    – <url>: campo texto que valida uma URL.
+    – <datetime>: campo que valida uma data com hora.
+    – <color>: campo texto que valida uma cor (hexadecimal).
+    Exemplos: https://codepen.io/tecweb/details/MWwEaag
+
+Formulário - Campos - Área de Texto
+    TextArea
+
+    Essa tag define uma área de texto para ser escritas várias
+    linhas de texto. Nesse caso, a tag possui abertura e
+    fechamento:
+    Exemplo: https://codepen.io/tecweb/details/NWqaGxo
+
+
+Formulário - Campos - Caixa de Seleção:
+    Select
+    • Essa tag define uma caixa de seleção para o usuário. As
+    opções são escritas diretamente dentro do elemento.
+    • A tag possui abertura e fechamento: <select></select>
+    • Dentro da tag vai a lista de opções que o usuário terá
+    disponível. Cada opção tem que estar dentro da tag
+    <option></option>.
+    • A tag option possui um atributo com o valor dela (value),
+    caso seja diferente do texto da opção.
+
+Formulário - Campos - Caixa de Marcação:
+    Input – Checkbox
+    • Ao invés de usar o select, o checkbox deixa todas as
+    opções listadas na tela.
+    • O agrupamento de opções é feito pelo name dos inputs.
+    • O que é enviado para cada checkbox é o que estiver dentro
+    da propriedade value.
+    • Caso mais de um checkbox de um mesmo name seja
+    selecionado, é enviado um vetor de valores para o servidor.
+    • O checkbox mesmo depois de selecionado pode ser
+    “des-selecionado”.
+
+Formulário - Campos - Caixa de Opções:
+    Input – Radio
+
+    • Funciona de maneira similar ao checkbox, mostrando todas
+    as opções, com a diferença de que apenas um pode ser
+    selecionado (no mesmo grupo).
+    • O agrupamento de opções é feito pelo name dos inputs.
+    • O que é enviado para cada radio é o que estiver dentro da
+    propriedade value (padrão é on).
+    • O radio não pode ser “de-selecionado”.
+
+
+Formulário - Campos - Botões de Ação:
+    • Para executarmos ações dentro do formulários, podemos
+    criar botões com funcionalidades específicas.
+    • Botões podem ser escritos como uma variação da tag
+    input, mas mais comumente são escritos com suas próprias
+    tags button.
+    • Temos três tipos de botões nativos no HTML:
+    – Botão Simples (button).
+    – Botão de Submissão (submit).
+    – Botão de Limpeza (reset).
+
+    • Botões do tipo button não possuem função nativa no
+    HTML, são usados mais para executar funções JavaScript
+    • Botões do tipo submit são utilizados para enviar os dados
+    dentro do formulário para o servidor. Para funcionar, esse
+    botão deve estar dentro de um formulário.
+    • Botões do tipo reset são utilizados para colocar o valor
+    padrão nos campos (ou no caso dos radios e checkboxes o
+    estado padrão). Assim como o submit ele só funciona se
+    estiver dentro de um formulário.
+
+    Exemplo: https://codepen.io/tecweb/details/RwPLWJY
+
+
+Semântica - Etiquetas - Labels:
+    • É comum termos perto de cada campo um texto do seu
+    significado (ex: a palavra E-Mail perto do campo de e-mail).
+    • Palavra soltas perto de campos não são automaticamente
+    associados a eles, para que isso ocorra vamos usar a tag label.
+    • Essa tag label serve apenas para conectar um texto de
+    significado para um input qualquer (e apenas input).
+    • Para fazer essa conexão, usamos o atributo for do label ser
+    igual ao atributo id do input.
+    Outro efeito do label associado a um campo é que ao clicar no
+    label, ele passa o foco para o campo associado, facilitando a
+    acessibilidade do seu site (principalmente para checkbox’s e
+    radios)
+
+Diferença nos métodos:
+    • No formulário podemos usar tanto o método GET quanto o
+    POST.
+    • Ambos vão enviar as mesmas informações ao servidor, que
+    as entenderá de uma mesma maneira.
+    • Como o GET colocar todos os dados coletados diretamente
+    na URL, não é recomendado utilizar o GET quando essa
+    informações são muito numerosas ou sensíveis (ex: senha).
+    • O POST por sua vez, codifica a informação e coloca ela
+    diretamente no corpo da requisição. Isso deixa um pouco
+    mais segura a transmissão, além de não haver limite do
+    tamanho da informação a ser transmitida.
