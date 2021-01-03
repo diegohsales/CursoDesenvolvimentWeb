@@ -1,0 +1,253 @@
+(Como adicionar CSS)
+
+    Quando um navegador lê uma folha de estilo, ele formata o documento HTML de acordo com as informações na folha de estilo.
+    Três maneiras de inserir CSS
+    
+    Existem três maneiras de inserir uma folha de estilo:
+    - CSS Externo
+    - CSS Interno
+    - CSS Inline
+    
+
+(CSS Externo)
+    
+    Com uma folha de estilo externa, você pode alterar a aparência de um site inteiro alterando apenas um arquivo!
+    Cada página HTML deve incluir uma referência ao arquivo de folha de estilo externo dentro do elemento <link>, dentro da seção head.
+    Exemplo:
+    
+    Estilos externos são definidos dentro do elemento <link>, dentro da seção <head> de uma página HTML:
+    
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <link rel="stylesheet" href="mystyle.css">
+    </head>
+    <body>
+    
+    <h1>This is a heading</h1>
+    <p>This is a paragraph.</p>
+    
+    </body>
+    </html>
+    
+    Uma folha de estilo externa pode ser escrita em qualquer editor de texto e deve ser salva com uma extensão .css.
+    
+    O arquivo .css externo não deve conter nenhuma tag HTML.
+    
+    Esta é a aparência do arquivo "mystyle.css":
+
+("mystyle.css")
+    body {
+      background-color: lightblue;
+    }
+    
+    h1 {
+      color: navy;
+      margin-left: 20px;
+    }
+    
+    Nota: Não adicione um espaço entre o valor da propriedade e a unidade (como margin-left: 20 px;). 
+    A maneira correta é:margin-left: 20px;
+
+    
+(CSS Interno)
+    
+    Uma folha de estilo interna pode ser usada se uma única página HTML tiver um estilo exclusivo.
+    O estilo interno é definido dentro do elemento <style>, dentro da seção head.
+    Exemplo:
+    
+    Os estilos internos são definidos no elemento <style>, dentro da seção <head> de uma página HTML:
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <style>
+    body {
+      background-color: linen;
+    }
+    
+    h1 {
+      color: maroon;
+      margin-left: 40px;
+    }
+    </style>
+    </head>
+    <body>
+    
+    <h1>This is a heading</h1>
+    <p>This is a paragraph.</p>
+    
+    </body>
+    </html>
+
+
+(CSS Inline)
+    
+    Um estilo embutido pode ser usado para aplicar um estilo único a um único elemento.
+    Para usar estilos embutidos, adicione o atributo de estilo ao elemento relevante. O atributo style pode 
+    conter qualquer propriedade CSS.
+    Exemplo:
+    
+    Os estilos inline são definidos no atributo "style" do elemento relevante:
+
+    <!DOCTYPE html>
+    <html>
+    <body>
+    
+    <h1 style="color:blue;text-align:center;">This is a heading</h1>
+    <p style="color:red;">This is a paragraph.</p>
+    
+    </body>
+    </html>
+    
+    Dica: Um estilo embutido perde muitas das vantagens de uma folha de estilo (ao misturar conteúdo com apresentação). 
+    Use este método com moderação.
+    Várias folhas de estilo    
+    Se algumas propriedades foram definidas para o mesmo seletor (elemento) em diferentes folhas de estilo, o valor da 
+    última folha de estilo lida será usado. 
+    
+    Suponha que uma folha de estilo externa tenha o seguinte estilo para o elemento <h1>:
+    h1 {
+      color: navy;
+    }
+    
+    Então, suponha que uma folha de estilo interna também tenha o seguinte estilo para o elemento <h1>:
+    h1 {
+      color: orange;   
+    }
+
+    Exemplo:
+    
+    Se o estilo interno for definido após o link para a folha de estilo externa, os elementos <h1> serão "laranja":
+
+    <head>
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <style>
+    h1 {
+      color: orange;
+    }
+    </style>
+    </head>
+    Exemplo
+    
+    No entanto, se o estilo interno for definido antes do link para a folha de estilo externa, os elementos <h1> serão "navy": 
+    <head>
+    <style>
+    h1 {
+      color: orange;
+    }
+    </style>
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    </head>
+
+
+(Seletor CSS)
+
+    O seletor aponta para o elemento HTML que você deseja estilizar.
+    O bloco de declaração contém uma ou mais declarações separadas por ponto e vírgula.
+    Cada declaração inclui um nome de propriedade CSS e um valor, separados por dois pontos.
+    Várias declarações CSS são separadas por ponto-e-vírgula e os blocos de declaração são cercados por chaves.
+    Exemplo
+
+    Neste exemplo, todos os elementos <p> serão alinhados ao centro, com uma cor de texto vermelha:
+
+    seletor{
+        height:[valor];
+        width:[valor];
+        }
+
+    p {                             
+    color: red;
+    text-align: center;
+    }
+    Exemplo Explicado
+
+    pé um seletor em CSS (aponta para o elemento HTML que você deseja estilizar: <p>).
+    coloré uma propriedade e redé o valor da propriedade
+    text-aligné uma propriedade e centeré o valor da propriedade
+
+    
+(Seletores CSS)
+    
+    Os seletores CSS são usados ​​para "encontrar" (ou selecionar) os elementos HTML que você deseja estilizar.
+    Podemos dividir os seletores CSS em cinco categorias:
+
+    - Seletores simples (selecione os elementos com base no nome, id, classe)
+    - Seletores combinadores (selecione os elementos com base em uma relação específica entre eles)
+    - Seletores de pseudoclasse (selecione os elementos com base em um determinado estado)
+    - Seletores de pseudoelementos (selecione e estilize uma parte de um elemento)
+    - Seletores de atributos (selecione os elementos com base em um atributo ou valor de atributo)
+    
+    Esta página explicará os seletores CSS mais básicos.
+    O seletor de elemento CSS
+    
+    O seletor de elemento seleciona elementos HTML com base no nome do elemento.
+    Exemplo
+    
+    Aqui, todos os elementos <p> na página serão alinhados ao centro, com uma cor de texto vermelha: 
+
+    p {
+      text-align: center;
+      color: red;
+    }
+
+
+(O seletor de agrupamento CSS)
+    
+    O seletor de agrupamento seleciona todos os elementos HTML com as mesmas definições de estilo.
+    Observe o seguinte código CSS (os elementos h1, h2 e p têm as mesmas definições de estilo):
+
+    h1 {
+      text-align: center;
+      color: red;
+    }
+    
+    h2 {
+      text-align: center;
+      color: red;
+    }
+    
+    p {
+      text-align: center;
+      color: red;
+    }
+    
+    Será melhor agrupar os seletores, para minimizar o código.
+    
+    Para agrupar seletores, separe cada seletor com uma vírgula.
+    Exemplo:
+    
+    Neste exemplo, agrupamos os seletores do código acima:
+
+    h1, h2, p {
+      text-align: center;
+      color: red;
+    } 
+
+
+
+Seletor           Exemplo         Descrição de exemplo
+.class            .intro          Seleciona todos os elementos com class = "intro"
+#id               #firstname      Seleciona o elemento com id = "firstname"
+*                 *               Seleciona todos os elementos
+elemento          p               Seleciona todos os elementos <p>
+element,element,  div, p          Seleciona todos os elementos <div> e todos os elementos <p>
+
+
+(External CSS) = Usa-se um css externo ou de um NEW FILE ou NEW FOLDER com toda configuração do CSS.
+
+(Internal CSS) = O estilo interno é definido dentro do elemento <style>, dentro da seção head. Dentro do próprio HTML.
+Ex:
+<style type="text/css"> 
+</style>
+
+
+(Inline CSS) = Para usar estilos embutidos, adicione o atributo de estilo ao elemento relevante. 
+O atributo style pode conter qualquer propriedade CSS. Isso tudo dentro do próprio HTML na própria linha ou
+na tag que você desejar.
+EX:
+<p style=" color: red;"> - Definir propriedade e definir valor dessa propriedade.
+
+Seletor = Nome daquilo que você deseja formatar.
+{Propriedade = é o que você deseja fazer.
+Valor = é o valor da propriedade (cor, tamanho, tipo de letra etc)}

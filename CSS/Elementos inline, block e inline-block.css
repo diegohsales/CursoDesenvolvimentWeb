@@ -1,0 +1,74 @@
+(Layout CSS - display: inline-block)
+O display: valor inline-block
+
+    Em comparação com display: inline, a principal diferença é que display: inline-block permite definir uma largura e altura no elemento.
+
+    Além disso, com display: inline-block, as margens / preenchimentos superior e inferior são respeitados, mas com display: inlineeles 
+    não são.
+
+    Em comparação com display: block, a principal diferença é que display: inline-block não adiciona uma quebra de linha após o elemento,
+    portanto, o elemento pode ficar próximo a outros elementos.
+
+    O exemplo a seguir mostra os diferentes comportamentos de display: inline, display: inline-block e display: block:
+    Exemplo:
+
+    span.a {
+    display: inline; /* the default for span */ * o padrão para span *
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+    border: 1px solid blue;
+    background-color: yellow;
+    }
+
+    span.b {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+    border: 1px solid blue;
+    background-color: yellow;
+    }
+
+    span.c {
+    display: block;
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+    border: 1px solid blue;
+    background-color: yellow;
+    }
+    Usando bloco embutido para criar links de navegação
+
+    Um uso comum de display: inline-block é exibir os itens da lista horizontalmente em vez de verticalmente. O exemplo a seguir 
+    cria links de navegação horizontal:
+    Exemplo:
+
+    .nav {
+    background-color: yellow;
+    list-style-type: none;
+    text-align: center; 
+    padding: 0;
+    margin: 0;
+    }
+
+    .nav li {
+    display: inline-block;
+    font-size: 20px;
+    padding: 20px;
+    }
+
+Resumindo: 
+(ELEMENTO BLOCK)
+    Elementos block como por exemplo <h1>, <p>, <table> eles tem uma largura que ocupa todo o espaçamento da tela. Então todo espaço
+    disponível em tela o elemento em blocos ele vai ocupar um outro comportamento do elemento block é que ele fica abaixo do outro.
+    Então quando nós definimos por exemplo <h1> e em seguida um outro <h1> eles irão ocupar todo espaço da tela e ficar um abaixo do 
+    outro. Esse é o comportamento pdrão do elemento block.
+
+(ELEMENTO INLINE)
+    Como exemplo temos o link <a>, <span>, <img> e vários outros elementos em que ele tem um comportamento diferente. Toda vez que
+    utilizamos o elemento inline ele fica um elemento à frente do outro, e a largura da caixa do elemento é de acordo com o seu contéudo.
+
+(ELEMENTO INLINE-BLOCK)
+    O elemento inline block ele tem a largura definida baseada no seu contéudo mas os itens ficam um abaixo do outro. Um exemplo para utiilzar
+    o inline-block é utilizando a propriedade (display: inline-block).

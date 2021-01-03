@@ -1,0 +1,267 @@
+(Layout CSS - flutuar e limpar)
+
+    A floatpropriedade CSS especifica como um elemento deve flutuar.
+
+    A clearpropriedade CSS especifica quais elementos podem flutuar ao lado do elemento limpo e em que lado.
+
+
+(A propriedade float)
+
+    A floatpropriedade é usada para posicionar e formatar o conteúdo, por exemplo, deixar uma imagem flutuar à esquerda do texto em 
+    um contêiner.
+
+    A floatpropriedade pode ter um dos seguintes valores:
+
+        º (left) - O elemento flutua à esquerda de seu contêiner
+        º (right) - O elemento flutua à direita de seu contêiner
+        º (none) - O elemento não flutua (será exibido apenas onde ocorre no texto). Este é o padrão
+        º (inherit) - O elemento herda o valor flutuante de seu pai
+
+    Em seu uso mais simples, a floatpropriedade pode ser usada para envolver o texto em imagens.
+    Exemplo - float: right;
+
+    O exemplo a seguir especifica que uma imagem deve flutuar para a direita em um texto:
+
+    AbacaxiLorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas 
+    odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus 
+    vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum 
+    ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac ...
+    Exemplo:
+
+    img {
+    float: right;
+    }
+
+    Exemplo - float: left;
+
+    O exemplo a seguir especifica que uma imagem deve flutuar para a esquerda em um texto:
+
+    AbacaxiLorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas 
+    odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus 
+    vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum 
+    ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac ...
+    Exemplo:
+
+    img {
+    float: left;
+    }
+    Exemplo - Sem flutuação
+
+    No exemplo a seguir, a imagem será exibida apenas onde ocorre no texto (float: nenhum;):
+
+    Abacaxi Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas 
+    odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus 
+    vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum 
+    ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac ...
+    Exemplo:
+
+    img {
+    float: none;
+    }
+
+
+
+(CSS Layout - clear and clearfix)
+(A propriedade clear ou clara)
+A clearpropriedade especifica quais elementos podem flutuar ao lado do elemento limpo e em qual lado.
+
+A clearpropriedade pode ter um dos seguintes valores:
+
+    º (none) - permite elementos flutuantes em ambos os lados. Este é o padrão
+    º (left) - nenhum elemento flutuante permitido no lado esquerdo
+    º (right)- Não são permitidos elementos flutuantes no lado direito
+    º (both) - Nenhum elemento flutuante permitido no lado esquerdo ou direito
+    º (inherit) - O elemento herda o valor claro de seu pai
+
+A maneira mais comum de usar a clear propriedade é depois de usar uma float propriedade em um elemento.
+
+Ao limpar os flutuadores, você deve combinar o clear com o flutuante: Se um elemento for flutuado para a esquerda, você deve limpar 
+para a esquerda. Seu elemento flutuado continuará a flutuar, mas o elemento limpo aparecerá abaixo dele na página da web.
+
+O exemplo a seguir limpa o flutuador à esquerda. Significa que nenhum elemento flutuante é permitido no lado esquerdo (do div):
+Exemplo:
+
+div {
+  clear: left;
+}
+
+O Hack Clearfix
+
+Se um elemento for mais alto do que o elemento que o contém e estiver flutuando, ele "transbordará" para fora de seu contêiner:
+Sem Clearfix
+Com Clearfix
+
+Então, podemos adicionar overflow: auto;ao elemento que o contém para corrigir este problema:
+Exemplo:
+
+.clearfix {
+  overflow: auto;
+}
+
+O overflow: autoclearfix funciona bem desde que você consiga manter o controle de suas margens e preenchimento (caso contrário, você 
+pode ver barras de rolagem). O novo e moderno hack do clearfix , entretanto, é mais seguro de usar e o código a seguir é usado para a 
+maioria das páginas da web:
+Exemplo:
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+} 
+
+
+(Layout CSS - Exemplos de flutuação ou float)
+
+    Esta página contém exemplos comuns de float.
+    Grade de caixas / caixas de largura igual
+
+    Box 1        Box 2
+
+    Box 1        Box 2        Box 3
+
+    Com a floatpropriedade, é fácil colocar caixas de conteúdo lado a lado:
+    Exemplo:
+
+    * {
+    box-sizing: border-box;
+    }
+
+    .box {
+    float: left;
+    width: 33.33%; /* three boxes (use 25% for four, and 50% for two, etc) */* três caixas (use 25% para quatro e 50% para duas, etc) * /
+    padding: 50px; /* if you want space between the images */* se você quiser espaço entre as imagens * /
+    }
+
+    O que é tamanho de caixa?
+
+    Você pode criar facilmente três caixas flutuantes lado a lado. No entanto, quando você adiciona algo que aumenta a largura de cada caixa (por exemplo, preenchimento ou bordas), a caixa se quebra. A box-sizingpropriedade permite incluir o preenchimento e a borda na largura (e altura) total da caixa, garantindo que o preenchimento fique dentro da caixa e não quebre.
+
+    Você pode ler mais sobre a propriedade box-sizing em nosso capítulo CSS Box Sizing .
+    Imagens lado a lado:
+
+    Itália    Floresta    Montanhas
+
+    A grade de caixas também pode ser usada para exibir imagens lado a lado:
+    Exemplo:
+
+    .img-container {
+    float: left;
+    width: 33.33%; /* three containers (use 25% for four, and 50% for two, etc) */*três recipientes (use 25% para quatro e 50% para dois, etc) * /
+    padding: 5px; /* if you want space between the images */*se você quiser espaço entre as imagens * /
+    }
+
+    Caixas de igual altura
+
+    No exemplo anterior, você aprendeu como colocar caixas flutuantes lado a lado com largura igual. No entanto, não é fácil criar caixas flutuantes com alturas iguais. Uma solução rápida, no entanto, é definir uma altura fixa, como no exemplo abaixo:
+    Box 1
+
+    Algum conteúdo, algum conteúdo, algum conteúdo
+    Box 2
+
+    Algum conteúdo, algum conteúdo, algum conteúdo
+
+    Algum conteúdo, algum conteúdo, algum conteúdo
+
+    Algum conteúdo, algum conteúdo, algum conteúdo
+    Exemplo:
+
+    .box {
+    height: 500px;
+    }
+
+    No entanto , isso não é muito flexível. Tudo bem se você puder garantir que as caixas sempre terão a mesma quantidade de conteúdo. 
+    Mas muitas vezes, o conteúdo não é o mesmo. Se você tentar o exemplo acima em um telefone celular, verá que o conteúdo da segunda 
+    caixa será exibido fora da caixa. É aqui que CSS3 Flexbox se torna útil - pois pode esticar caixas automaticamente para serem tão 
+    longas quanto a caixa mais longa:
+    Exemplo:
+
+    Usando o Flexbox para criar caixas flexíveis:
+    Caixa 1 - Este é um texto para se certificar de que o conteúdo fica realmente alto. Este é um texto para garantir que o conteúdo 
+    fique realmente alto. Este é um texto para garantir que o conteúdo fique realmente alto.
+    Caixa 2 - Minha altura seguirá a Caixa 1.
+
+    O único problema com o Flexbox é que ele não funciona no Internet Explorer 10 ou em versões anteriores. Você pode ler mais sobre o 
+    Módulo de layout Flexbox em nosso capítulo CSS Flexbox .
+    menu de navegação
+
+    Use floatcom uma lista de hiperlinks para criar um menu horizontal:
+    Exemplo:
+
+        Casa        Notícia        Contato        Sobre
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+        <style>
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          background-color: #333;
+        }
+        
+        li {
+          float: left;
+        }
+        
+        li a {
+          display: inline-block;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
+        
+        li a:hover {
+          background-color: #111;
+        }
+        
+        .active {
+          background-color: red;
+        }
+        </style>
+        </head>
+        <body>
+        
+        <ul>
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+        
+        </body>
+        </html>
+        
+
+(Exemplo de layout da web)
+
+    Também é comum fazer layouts inteiros da web usando a floatpropriedade:
+    Exemplo:
+
+    .header, .footer {
+    background-color: grey;
+    color: white;
+    padding: 15px;
+    }
+
+    .column {
+    float: left;
+    padding: 15px;
+    }
+
+    .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+    }
+
+    .menu {
+    width: 25%;
+    }
+
+    .content {
+    width: 75%;
+    }
+

@@ -1,0 +1,304 @@
+(Cores)
+    Existem 16,777,216 cores disponíveis nas CSS
+    • As cores podem ser um nome pré-definido:
+    • Podem ser definidas por valores RGB.
+    – red é o mesmo que rgb(255,0,0), o mesmo que
+    rgb(100%,0%,0%),
+    • Ou por um código hexadecimal.
+    – red é o mesmo que #ff0000 e o mesmo que #f00
+
+    As cores podem ser aplicadas usando as propriedades
+    color e background-color:
+
+    h1 {
+    color: #ffc;
+    background-color: #009;
+    }
+
+(Cores do Fundo)
+    A propriedade CSS background define efeito de cor de fundo de um elemento.
+    
+
+(Fontes)
+    As propriedades da fonte CSS definem a família da fonte, negrito, tamanho e estilo de um texto.
+    No CSS, existem dois tipos de nomes de família de fontes:
+
+    (família genérica) - um grupo de famílias de fontes com uma aparência semelhante (como "Serif" ou "Monospace")
+    (família de fontes) - uma família de fontes específica (como "Times New Roman" ou "Arial")
+
+(Família de fontes)
+
+    A família da fonte de um texto é definida com a font-familypropriedade.
+
+    A font-familypropriedade deve conter vários nomes de fontes como um sistema de "fallback". Se o navegador não suportar a primeira fonte, ele tentará a próxima fonte e assim por diante.
+
+    Comece com a fonte desejada e termine com uma família genérica, para permitir que o navegador escolha uma fonte semelhante na família genérica, se nenhuma outra fonte estiver disponível.
+
+    Nota : Se o nome de uma família de fontes for mais de uma palavra, deve estar entre aspas, como: "Times New Roman".
+
+    Mais de uma família de fontes é especificada em uma lista separada por vírgulas:
+    Exemplo
+
+    Especifique a fonte para três parágrafos:
+
+    .serif {
+    font-family: "Times New Roman", Times, serif;
+    }
+
+    .sansserif {
+    font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .monospace {
+    font-family: "Lucida Console", Courier, monospace;
+    }
+
+    Exemplo:
+
+    Especifique a fonte "Impact" para um parágrafo:
+
+    p.impact {
+    font-family: Impact, Charcoal, sans-serif;
+    }
+
+
+(Estilo de fonte)
+
+    A font-stylepropriedade é usada principalmente para especificar texto em itálico.
+
+    Esta propriedade possui três valores:
+
+        normal - o texto é mostrado normalmente
+        itálico - o texto é mostrado em itálico
+        oblíquo - o texto está "inclinado" (oblíquo é muito semelhante ao itálico, mas menos suportado)
+
+    Exemplo
+    p.normal {
+    font-style: normal;
+    }
+
+    p.italic {
+    font-style: italic;
+    }
+
+    p.oblique {
+    font-style: oblique;
+    }
+
+(Espessura da fonte)
+
+    A font-weightpropriedade especifica o peso de uma fonte:
+    Exemplo:
+
+    p.normal {
+    font-weight: normal;
+    }
+
+    p.thick {
+    font-weight: bold;
+    }
+
+(Variante de fonte)
+
+    A font-variantpropriedade especifica se um texto deve ou não ser exibido em uma fonte versalete.
+
+    Em uma fonte em caixa baixa, todas as letras minúsculas são convertidas em letras maiúsculas. No entanto, as letras maiúsculas convertidas aparecem em um tamanho de fonte menor do que as letras maiúsculas originais no texto.
+    Exemplo:
+
+    p.normal {
+    font-variant: normal;
+    }
+
+    p.small {
+    font-variant: small-caps;
+    }
+
+(Tamanho da fonte CSS)
+    Tamanho da fonte
+    
+    A font-sizepropriedade define o tamanho do texto.
+    
+    Ser capaz de gerenciar o tamanho do texto é importante em web design. No entanto, você não deve usar ajustes de tamanho de fonte para fazer com que os parágrafos se pareçam com títulos ou que os cabeçalhos pareçam parágrafos.
+    
+    Sempre use as tags HTML adequadas, como <h1> - <h6> para títulos e <p> para parágrafos.
+    
+    O valor do tamanho da fonte pode ser um tamanho absoluto ou relativo.
+    
+    Tamanho absoluto:
+    
+        - Define o texto para um tamanho especificado
+        - Não permite que o usuário altere o tamanho do texto em todos os navegadores (ruim por motivos de acessibilidade)
+        - O tamanho absoluto é útil quando o tamanho físico da saída é conhecido
+    
+    Tamanho relativo:
+    
+        - Define o tamanho em relação aos elementos circundantes
+        - Permite ao usuário alterar o tamanho do texto nos navegadores
+    
+    Nota: Se você não especificar um tamanho de fonte, o tamanho padrão para texto normal, como parágrafos, é 16px (16px = 1em).
+    Definir tamanho da fonte com pixels
+    
+    Definir o tamanho do texto com pixels oferece controle total sobre o tamanho do texto:
+    Exemplo:
+
+    h1 {
+      font-size: 40px;
+    }
+    
+    h2 {
+      font-size: 30px;
+    }
+    
+    p {
+      font-size: 14px;
+    }
+    
+    Dica: Se você usar pixels, ainda poderá usar a ferramenta de zoom para redimensionar a página inteira.
+    Definir tamanho da fonte com em
+    
+    Para permitir que os usuários redimensionem o texto (no menu do navegador), muitos desenvolvedores usam em vez de pixels.
+    
+    1em é igual ao tamanho da fonte atual. O tamanho de texto padrão em navegadores é 16px. Portanto, o tamanho padrão de 1em é 16px.
+    
+    O tamanho pode ser calculado de pixels para em usando esta fórmula: pixels / 16 = em
+    Exemplo:
+
+    h1 {
+      font-size: 2.5em; /* 40px/16=2.5em */
+    }
+    
+    h2 {
+      font-size: 1.875em; /* 30px/16=1.875em */
+    }
+    
+    p {
+      font-size: 0.875em; /* 14px/16=0.875em */
+    }
+    
+    No exemplo acima, o tamanho do texto em em é o mesmo do exemplo anterior em pixels. Porém, com o tamanho em, é possível ajustar o 
+    tamanho do texto em todos os navegadores.
+    
+    Infelizmente, ainda há um problema com as versões anteriores do Internet Explorer. O texto fica maior do que deveria quando aumentado 
+    e menor do que deveria quando diminuído.
+    Use uma combinação de porcentagem e em
+    
+    A solução que funciona em todos os navegadores é definir um tamanho de fonte padrão em porcentagem para o elemento <body>:
+    Exemplo:
+
+    body {
+      font-size: 100%;
+    }
+    
+    h1 {
+      font-size: 2.5em;
+    }
+    
+    h2 {
+      font-size: 1.875em;
+    }
+    
+    p {
+      font-size: 0.875em;
+    }
+    
+    Nosso código agora funciona muito bem! Ele mostra o mesmo tamanho de texto em todos os navegadores e permite que todos ampliem ou redimensionem o texto!
+    Tamanho de fonte responsivo
+    
+    O tamanho do texto pode ser definido com uma vwunidade, o que significa "largura da janela de visualização".
+    
+    Dessa forma, o tamanho do texto seguirá o tamanho da janela do navegador:
+    Olá Mundo
+    
+    Redimensione a janela do navegador para ver como o tamanho da fonte é redimensionado.
+    Exemplo:
+
+    <h1 style="font-size:10vw">Hello World</h1>
+    
+    Viewport é o tamanho da janela do navegador. 1vw = 1% da largura da janela de visualização. Se a janela de visualização tiver 
+    50 cm de largura, 1vw é 0,5 cm.
+    
+
+(CSS Google Fonts)
+(Fontes do Google)
+
+    Se não quiser usar nenhuma das fontes padrão em HTML, você pode usar a API de fontes do Google para adicionar centenas de outras fontes à sua página.
+
+    Basta adicionar um link de folha de estilo e referir-se a uma família de fontes de sua escolha:
+    Exemplo:
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <style>
+    body {
+    font-family: "Sofia";
+    font-size: 22px;
+    }
+    </style>
+    </head>
+    <body>
+
+    <h1>Sofia Font</h1>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+
+    </body>
+    </html>
+
+    
+(Propriedade da fonte)
+
+    Para encurtar o código, também é possível especificar todas as propriedades de fonte individuais em uma propriedade.
+
+    A fontpropriedade é uma propriedade abreviada para:
+
+        - font-style
+        - font-variant
+        - font-weight
+        - font-size/line-height
+        - font-family
+
+    Exemplo:
+
+    Defina algumas propriedades de fonte com a declaração abreviada:
+    
+    p.a {
+    font: 20px Arial, sans-serif;
+    }
+
+    p.b {
+    font: italic small-caps bold 12px/30px Georgia, serif;
+    }
+
+(Tamanho de fonte ou textos)
+    Px - tamanho fixo
+    % - tamanho relativo
+    em - tamanho relativo ao container pai. 
+  
+OBS -> tamanho padrão da web é (16px), e quando colocamos um (font-size: 100%) ele tomara 100% do tamanho padrão. E p estilo de fonte (em) do tamanho de 1em é
+equivalente ao tamanho padrão da web também.
+
+(Estilo de textos)
+    - negrito -> Podemos utilizar o 'normal, bold ou de 100 a 900'
+    Ex:
+
+    font-weight: normal / bold / 100 ou 900 
+
+    - Italico -> Para usar a fonte italico podemos utilizar da seguinte maneira.
+    Ex:
+
+    font-style: italic
+
+    - Underline -> Para usar a formatação com (underline - que é uma linha em baixo do texto///overline que é a linha em cima do texto/// line-through é uma linha
+    cortando o meio do texto) temos que usar da seguinte 
+    maneira:
+    Ex:
+
+    text-decoration: underline / overline / line-through
+
+    E podemos utiilzar todas esses estilos de texto em uma unica propriedade, colocando tudo dentro de uma propriedade só.
+    Ex:
+
+    .texto{
+      font:
+    }

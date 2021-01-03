@@ -1,0 +1,174 @@
+(Layout CSS - A propriedade position)
+
+  A positionpropriedade especifica o tipo de método de posicionamento usado para um elemento (estático, relativo, fixo, absoluto ou 
+  aderente).
+  A posição Propriedade
+  A positionpropriedade especifica o tipo de método de posicionamento usado para um elemento.
+
+  Existem cinco valores de posição diferentes:
+
+      º static = Alinhamento padrão
+      º relative = Tem o seu alinhamento baseado na posição inicial do elemento então alinhamos
+      o elemebo baseado no posição inicial que ele tem o alinhamento absoluto.
+      º fixed = Ele é alinhados baseado na tela na janela do seu navegador que nós também chamoas 
+      de vil porte.
+      º absolute = Ele permite que você defina uma caixa que é removida do fluxo do documento e você
+      sonsegue alinhar essa caixa baseada no seu contêiner que tenha uma posição.
+      º sticky
+
+  Os elementos são posicionados usando as propriedades superior, inferior, esquerda e direita. No entanto, essas propriedades não 
+  funcionarão a menos que a 
+  position propriedade seja definida primeiro. Eles também funcionam de forma diferente dependendo do valor da posição.
+
+(Posição: estática (static))
+
+  Os elementos HTML são posicionados estáticos por padrão.
+  Os elementos posicionados estáticos não são afetados pelas propriedades superior, inferior, esquerda e direita.
+  Um elemento com position: static;não é posicionado de nenhuma maneira especial; está sempre posicionado de acordo com o fluxo 
+  normal da página:
+
+  Este elemento <div> tem posição: estático;
+
+  Aqui está o CSS usado:
+  Exemplo:
+
+  div.static {
+    position: static;
+    border: 3px solid #73AD21;
+  }
+
+(Posição: relativa (relative);)
+
+  Um elemento com position: relative;está posicionado em relação à sua posição normal.
+  Definir as propriedades superior, direita, inferior e esquerda de um elemento relativamente posicionado fará com que ele seja 
+  ajustado para longe de sua posição 
+  normal. Outro conteúdo não será ajustado para caber em qualquer lacuna deixada pelo elemento.
+
+  Este elemento <div> possui position: relative;
+
+  Aqui está o CSS usado:
+  Exemplo:
+
+  div.relative {
+    position: relative;
+    left: 30px;
+    border: 3px solid #73AD21;
+  }
+
+(Posição: fixa (fixed))
+
+  Um elemento com position: fixed;é posicionado em relação à janela de visualização, o que significa que ele sempre permanece no 
+  mesmo lugar, mesmo se a página for 
+  rolada. As propriedades superior, direita, inferior e esquerda são usadas para posicionar o elemento.
+  Um elemento fixo não deixa uma lacuna na página onde normalmente estaria localizado.
+
+  Observe o elemento fixo no canto inferior direito da página. Aqui está o CSS usado:
+  Exemplo:
+
+  div.fixed {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    border: 3px solid #73AD21;
+  }
+
+  Este elemento <div> tem position: fixed;
+
+(Posição: absoluta(absolute))
+
+  Um elemento com position: absolute;é posicionado em relação ao ancestral posicionado mais próximo (em vez de posicionado em relação 
+  à janela de visualização, 
+  como fixo).
+  Contudo; se um elemento posicionado de forma absoluta não tiver ancestrais posicionados, ele usa o corpo do documento e se move 
+  junto com a rolagem da página.
+
+  Nota: Um elemento "posicionado" é aquele cuja posição é qualquer coisa exceto static.
+
+  Aqui está um exemplo simples:
+  Este elemento <div> possui position: relative;
+  Este elemento <div> possui posição: absoluto;
+
+  Aqui está o CSS usado:
+  Exemplo:
+
+  div.relative {
+    position: relative;
+    width: 400px;
+    height: 200px;
+    border: 3px solid #73AD21;
+  }
+
+  div.absolute {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 200px;
+    height: 100px;
+    border: 3px solid #73AD21;
+  }
+
+(Posição: pegajosa(sticky))
+
+  Um elemento com position: sticky;é posicionado com base na posição de rolagem do usuário.
+  Um elemento aderente alterna entre relativee fixed, dependendo da posição de rolagem. Ele é posicionado em relação até que uma 
+  determinada posição de deslocamento 
+  seja encontrada na janela de exibição - então, ele "se fixa" no lugar (como a posição: fixa).
+
+  Observação: o Internet Explorer não oferece suporte para posicionamento fixo. O Safari requer um prefixo -webkit- (veja o exemplo 
+  abaixo). Você também deve 
+  especificar pelo menos um de top, right, bottomou leftpara o posicionamento pegajosa ao trabalho.
+
+  Neste exemplo, o elemento aderente adere ao topo da página ( top: 0), quando você atinge a posição de rolagem.
+  Exemplo:
+
+  div.sticky {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    background-color: green;
+    border: 2px solid #4CAF50;
+  }
+
+
+(Elementos sobrepostos(Overlapping))
+
+  Quando os elementos são posicionados, eles podem se sobrepor a outros elementos.
+
+  A z-index propriedade especifica a ordem da pilha de um elemento (qual elemento deve ser colocado na frente ou atrás dos outros).
+  Um elemento pode ter uma ordem de empilhamento positiva ou negativa:
+  Exemplo:
+
+  .conteudo1 {
+    position: absolute;
+    left: 160px;
+    top: 160px;
+    z-index: 1;
+  }
+
+  .conteudo{
+    position: absolute;
+    left: 80px;
+    top: 80px
+    z-index: 0
+  }
+
+  Quanto maior o número mais a frente ele aparece no seu docuemnto.
+
+  Um elemento com uma ordem de pilha maior está sempre na frente de um elemento com uma ordem de pilha inferior.
+
+  Nota: Se dois elementos posicionados se sobrepõem sem um z-index especificado, o elemento posicionado por último no código HTML será 
+  mostrado no topo.
+  Posicionamento de texto em uma imagem
+
+  Como posicionar texto sobre uma imagem:
+  Exemplo:
+
+  Top Left                              Top Right
+
+                      Centered
+
+
+  Bottom Left                          Bottom Right
+ 
+  

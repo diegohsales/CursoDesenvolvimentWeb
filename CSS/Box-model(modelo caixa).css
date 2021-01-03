@@ -1,0 +1,148 @@
+(Box-Model)
+
+    º Além da altura (height) e largura (width), temos algumas
+    outras medidas que influenciam no tamanho total que um
+    elemento HTML ocupa na página:
+
+        º Border: Já mostramos a borda, ela possui uma espessura, o
+    que altera também o espaço ocupado pela tag HTML.
+    Ex:
+
+    <div class="div1">
+        Div 1
+    </div>
+    <br/>
+    <div class="div2">
+        Div 1
+    </div>
+
+    div{
+        border: 3px solid black;
+        width: 200px;
+        height: 200px;
+    }
+
+    div.div1 {
+        background: yellow;
+    }
+
+    div.div2 {
+        background: red;
+        border-width: 10px;
+    }
+        º Padding: Espaço entre o conteúdo da tag e a borda dela. Pode
+    ser colocado para as quatro direções ou apenas as que forem
+    interessantes (top, bottom, left, right).
+
+    <div class="div1">
+        Div 1
+    </div>
+    <br/>
+    <div class="div2">
+        Div 1
+    </div>
+
+    div{
+        border: 3px solid black;
+        width: 200px;
+        height: 200px;
+    }
+
+    div.div1 {
+        background: yellow;
+        padding:10px
+    }
+
+    div.div2 {
+        background: red;
+        border-width: 10px;
+    }
+
+        º Margin: Espaço entre a borda do elemento até a borda do
+    próximo elemento (ou de algum limite do documento).
+    Também pode ser utilizada em todas as quatro direções ou
+    apenas nas que forem interessantes.
+
+    <div class="div1">
+        Div 1
+    </div>
+    <br/>
+    <div class="div2">
+        Div 1
+    </div>
+
+    div{
+        border: 3px solid black;
+        width: 200px;
+        height: 200px;
+    }
+
+    div.div1 {
+        background: yellow;
+        margin: 10px
+    }
+
+    div.div2 {
+        background: red;
+        border-width: 10px;
+    }
+
+(Box-model)
+    º Essas distâncias configuram o que chamamos de Box-Model
+    (modelo caixa):
+
+                Margin
+                Border
+                Padding
+                Content
+
+    º Desta maneira, quando definimos os atributos height e width
+    do elemento em si, esses valores não levam em consideração
+    o padding e o border, fazendo com que os elementos sejam
+    maiores do que deveriam.
+
+(Box-Model - Box Sizing)
+    º Para corrigir o problema basta utilizar a propriedade box-sizing. Os
+    valores possíveis são:
+
+    – content-box: Indica que as medidas de altura e largura não
+    devem incluir padding e border.
+
+    – border-box: Indica que as medidas de altura e largura
+
+    º Uma atitude comum entre os desenvolvedores é utilizar o
+    border-box para todos os objetos como padrão. Para facilitar,
+    podemos utilizar a seguinte regra para colocar esse atributo
+    para todos os elementos da página:
+    
+    * {
+        box-sizing: border-box;
+    }
+
+    Outro exemplo é:
+
+    *{
+        box-sizing: content-box;
+    }
+
+    width: 800%;
+    padding: 50px
+    border: 50px
+     __________________________________________________________
+    | border                50                                |
+    |                                                         |
+    |     padding           50                                |
+    |         ______________________________________          |
+    |         |                                     |         |
+    |50 | 50  |<----------------------------------> |         |
+    |         |           Width: 800px;             |         |
+    |         |_____________________________________|         |
+    |                        50                               |
+    |                        50                               |
+    |_________________________________________________________|
+
+    |---------------------------------------------------------|
+                            1000px
+
+Para mais configurações podemos achar em https://www.w3schools.com/css/css_templates.asp
+

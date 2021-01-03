@@ -1,0 +1,350 @@
+(Cores CSS)
+
+    CSS suporta mais de 140 nomes de cores, valores HEX, valores RGB , valores RGBA, valores HSL, valores HSLA e opacidade.
+(Cores RGBA)
+
+    Os valores de cores RGBA são uma extensão dos valores de cores RGB com um canal alfa - que especifica a opacidade de uma cor.
+
+    Um valor de cor RGBA é especificado com: rgba (vermelho, verde, azul, alfa). O parâmetro alfa é um número entre 0,0 (totalmente transparente) e 1,0 (totalmente opaco).
+    rgba (255, 0, 0, 0,2);
+    rgba (255, 0, 0, 0,4);
+    rgba (255, 0, 0, 0,6);
+    rgba (255, 0, 0, 0,8);
+
+    O exemplo a seguir define diferentes cores RGBA:
+    Exemplo
+    #p1 {background-color: rgba(255, 0, 0, 0.3);}  /* red with opacity */
+    #p2 {background-color: rgba(0, 255, 0, 0.3);}  /* green with opacity */
+    #p3 {background-color: rgba(0, 0, 255, 0.3);}  /* blue with opacity */
+
+
+(Cores HSL)
+
+    HSL significa Hue, Saturation and Lightness.
+
+    Um valor de cor HSL é especificado com: hsl (matiz, saturação, claridade).
+
+        Matiz é um grau na roda de cores (de 0 a 360):
+            0 (ou 360) é vermelho
+            120 é verde
+            240 é azul
+        A saturação é um valor percentual: 100% é a cor total.
+        A leveza também é uma porcentagem; 0% é escuro (preto) e 100% é branco.
+
+    hsl (0, 100%, 30%);
+    hsl (0, 100%, 50%);
+    hsl (0, 100%, 70%);
+    hsl (0, 100%, 90%);
+
+    O exemplo a seguir define diferentes cores HSL:
+    Exemplo
+    #p1 {background-color: hsl(120, 100%, 50%);}  /* green */
+    #p2 {background-color: hsl(120, 100%, 75%);}  /* light green */
+    #p3 {background-color: hsl(120, 100%, 25%);}  /* dark green */
+    #p4 {background-color: hsl(120, 60%, 70%);}   /* pastel green */
+    Cores HSLA
+
+    Os valores de cor HSLA são uma extensão dos valores de cor HSL com um canal alfa - que especifica a opacidade de uma cor.
+
+    Um valor de cor HSLA é especificado com: hsla (matiz, saturação, luminosidade, alfa), onde o parâmetro alfa define a opacidade. O parâmetro alfa é um número entre 0,0 (totalmente transparente) e 1,0 (totalmente opaco).
+    hsla (0, 100%, 30%, 0,3);
+    hsla (0, 100%, 50%, 0,3);
+    hsla (0, 100%, 70%, 0,3);
+    hsla (0, 100%, 90%, 0,3);
+
+    O exemplo a seguir define diferentes cores HSLA:
+    Exemplo
+    #p1 {background-color: hsla(120, 100%, 50%, 0.3);}  /* green with opacity */
+    #p2 {background-color: hsla(120, 100%, 75%, 0.3);}  /* light green with opacity */
+    #p3 {background-color: hsla(120, 100%, 25%, 0.3);}  /* dark green with opacity */
+    #p4 {background-color: hsla(120, 60%, 70%, 0.3);}   /* pastel green with opacity */
+    Opacidade
+
+    A opacitypropriedade CSS define a opacidade de todo o elemento (a cor de fundo e o texto serão opacos / transparentes).
+
+    O opacityvalor da propriedade deve ser um número entre 0,0 (totalmente transparente) e 1,0 (totalmente opaco).
+    rgb (255, 0, 0); opacidade: 0,2;
+    rgb (255, 0, 0); opacidade: 0,4;
+    rgb (255, 0, 0); opacidade: 0,6;
+    rgb (255, 0, 0); opacidade: 0,8;
+
+    Observe que o texto acima também será transparente / opaco!
+
+    O exemplo a seguir mostra diferentes elementos com opacidade:
+    Exemplo
+    #p1 {background-color:rgb(255,0,0);opacity:0.6;}  /* red with opacity */
+    #p2 {background-color:rgb(0,255,0);opacity:0.6;}  /* green with opacity */
+    #p3 {background-color:rgb(0,0,255);opacity:0.6;}  /* blue with opacity */
+
+OBS: Opção background-color formata o fundo do texto, e a opção color formata o cor do texto.
+
+
+(Gradientes CSS)
+(Fundos gradientes)
+
+    Os gradientes CSS permitem que você exiba transições suaves entre duas ou mais cores especificadas.
+
+    CSS define dois tipos de gradientes:
+
+        Gradientes lineares (desce / sobe / esquerda / direita / diagonalmente)
+        Gradientes radiais (definidos por seu centro)
+
+    Gradientes Lineares CSS
+
+    Para criar um gradiente linear, você deve definir pelo menos duas interrupções de cor. As paradas de cor são as cores entre as quais você deseja renderizar transições suaves. Você também pode definir um ponto inicial e uma direção (ou um ângulo) junto com o efeito de gradiente.
+    Sintaxe
+    background-image: linear-gradient(direction, color-stop1, color-stop2, ...);
+
+    Direção - De cima para baixo (este é o padrão)
+
+    O exemplo a seguir mostra um gradiente linear que começa no topo. Ele começa vermelho, mudando para amarelo:
+    de cima para baixo (padrão)
+    Exemplo
+    #grad {
+    background-image: linear-gradient(red, yellow);
+    }
+
+    Direção - da esquerda para a direita
+
+    O exemplo a seguir mostra um gradiente linear que começa da esquerda. Ele começa vermelho, mudando para amarelo:
+    da esquerda para direita
+    Exemplo
+    #grad {
+    background-image: linear-gradient(to right, red , yellow);
+    }
+
+    Direção - Diagonal
+
+    Você pode fazer um gradiente diagonalmente especificando as posições iniciais horizontal e vertical.
+
+    O exemplo a seguir mostra um gradiente linear que começa no canto superior esquerdo (e vai para o canto inferior direito). Ele começa vermelho, mudando para amarelo:
+    superior esquerdo para inferior direito
+    Exemplo
+    #grad {
+    background-image: linear-gradient(to bottom right, red, yellow);
+    }
+
+
+
+(CSS Radial Gradients)
+
+    Um gradiente radial é definido por seu centro.
+    
+    Para criar um gradiente radial, você também deve definir pelo menos duas interrupções de cor.
+    Sintaxe
+    background-image: radial-gradient(shape size at position, start-color, ..., last-color);
+    
+    Por padrão, a forma é a elipse, o tamanho é o canto mais distante e a posição é o centro.
+    
+    Gradiente radial - interrupções de cores com espaçamento uniforme (este é o padrão)
+    
+    O exemplo a seguir mostra um gradiente radial com pontos de cor uniformemente espaçados:
+    Exemplo:
+
+    #grad {
+      background-image: radial-gradient(red, yellow, green);
+    }
+    
+    Gradiente radial - interrupções de cores com espaçamento diferente
+    
+    O exemplo a seguir mostra um gradiente radial com interrupções de cores com espaçamento diferente:
+    Exemplo:
+
+    #grad {
+      background-image: radial-gradient(red 5%, yellow 15%, green 60%);
+    }
+    Definir forma
+    
+    O parâmetro de forma define a forma. Pode assumir o círculo ou elipse de valor. O valor padrão é elipse.
+    
+    O exemplo a seguir mostra um gradiente radial com a forma de um círculo:
+    Exemplo:
+
+    #grad {
+      background-image: radial-gradient(circle, red, yellow, green);
+    }
+    Uso de palavras-chave de tamanhos diferentes
+    
+    O parâmetro de tamanho define o tamanho do gradiente. Pode ter quatro valores:
+    
+        lado mais próximo
+        lado mais distante
+        esquina mais próxima
+        canto mais distante
+    
+    Exemplo:
+    
+    Um gradiente radial com palavras-chave de tamanhos diferentes:
+    #grad1 {
+      background-image: radial-gradient(closest-side at 60% 55%, red, yellow, black);
+    }
+    
+    #grad2 {
+      background-image: radial-gradient(farthest-side at 60% 55%, red, yellow, black);
+    }
+    Repetindo um gradiente radial
+    
+    A função gradiente radial de repetição () é usada para repetir gradientes radiais:
+    Exemplo:
+    
+    Um gradiente radial de repetição:
+
+    #grad {
+      background-image: repeating-radial-gradient(red, yellow 10%, green 15%);
+    }
+
+(Imagem de Fundo)
+(CSS Multiple Backgrounds)
+
+    CSS permite adicionar várias imagens de fundo para um elemento, por meio da background-imagepropriedade.
+
+    As diferentes imagens de fundo são separadas por vírgulas e as imagens são empilhadas umas sobre as outras, onde a primeira imagem está mais próxima do visualizador.
+
+    O exemplo a seguir tem duas imagens de fundo, a primeira imagem é uma flor (alinhada na parte inferior e direita) e a segunda imagem é um fundo de papel (alinhado no canto superior esquerdo):
+    Exemplo:
+
+    #example1 {
+    background-image: url(img_flwr.gif), url(paper.gif);
+    background-position: right bottom, left top; define uma posição para a imagem dentro do body
+    background-repeat: no-repeat, repeat, repeat-x vai repetir só no eixo x ou na horizontal, repeat-y no eixo vertical;
+    background-attachment: fixed; deixa a imagem simplesmente fixada na tela, podemos descer a barra de rolagem que mesmo assim
+    a imagem vai ficar lá;
+    background-attachment: scroll; a imagem rola junto com o conteudo.
+    }
+
+    Várias imagens de fundo podem ser especificadas usando as propriedades de fundo individuais (como acima) ou a backgroundpropriedade abreviada.
+
+    O exemplo a seguir usa a backgroundpropriedade shorthand (mesmo resultado do exemplo acima):
+    Exemplo:
+
+    #example1 {
+    background: url(img_flwr.gif) right bottom no-repeat, url(paper.gif) left top repeat;
+    }
+
+    
+(CSS Background Size)
+
+    A background-size propriedade CSS permite que você especifique o tamanho das imagens de fundo.
+
+    O tamanho pode ser especificado em comprimentos, porcentagens ou usando uma das duas palavras-chave: conter ou cobrir.
+
+    O exemplo a seguir redimensiona uma imagem de fundo para muito menor do que a imagem original (usando pixels):
+    Lorem Ipsum Dolor
+
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+
+    Ut wisi enim ad minim veniam, quis nostrud exercício ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+
+    Aqui está o código:
+    Exemplo:
+
+    #div1 {
+    background: url(img_flower.jpg);
+    background-size: 100px 80px;
+    background-repeat: no-repeat;
+    }
+
+    Os dois outros valores possíveis para background-sizesão contain e cover.
+
+    A containpalavra-chave dimensiona a imagem de fundo para ficar o maior possível (mas sua largura e altura devem caber dentro da área de conteúdo). Como tal, dependendo das proporções da imagem de fundo e da área de posicionamento do fundo, pode haver algumas áreas do fundo que não são cobertas pela imagem de fundo.
+
+    A coverpalavra-chave dimensiona a imagem de plano de fundo para que a área de conteúdo seja completamente coberta pela imagem de plano de fundo (sua largura e altura são iguais ou excedem a área de conteúdo). Como tal, algumas partes da imagem de fundo podem não ser visíveis na área de posicionamento de fundo.
+
+    O exemplo a seguir ilustra o uso de containe cover:
+    Exemplo:
+
+    #div1 {
+    background: url(img_flower.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    }
+
+    #div2 {
+    background: url(img_flower.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    }
+
+(Definir tamanhos de várias imagens de fundo)
+
+    A background-sizepropriedade também aceita vários valores para o tamanho do fundo (usando uma lista separada por vírgulas), ao trabalhar com vários fundos.
+
+    O exemplo a seguir tem três imagens de fundo especificadas, com diferentes valores de tamanho de fundo para cada imagem:
+    Exemplo:
+
+    #example1 {
+    background: url(img_tree.gif) left top no-repeat, url(img_flwr.gif) right bottom no-repeat, url(paper.gif) left top repeat;
+    background-size: 50px, 130px, auto;
+    }
+
+    Imagem de fundo em tamanho real
+
+    Agora queremos ter uma imagem de fundo em um site que cubra a janela inteira do navegador o tempo todo.
+
+    Os requisitos são os seguintes:
+
+        - Preencha a página inteira com a imagem (sem espaço em branco)
+        - Dimensione a imagem conforme necessário
+        - Imagem central na página
+        - Não faça barras de rolagem
+
+    O exemplo a seguir mostra como fazer isso; Use o elemento <html> (o elemento <html> sempre tem pelo menos a altura da janela do navegador). Em seguida, defina um plano de fundo fixo e centralizado nele. Em seguida, ajuste seu tamanho com a propriedade background-size:
+    Exemplo:
+
+    html {
+    background: url(img_man.jpg) no-repeat center fixed;
+    background-size: cover;
+    }
+
+(Imagem Heroica)
+
+    Você também pode usar diferentes propriedades de fundo em um <div> para criar uma imagem principal (uma imagem grande com texto) e colocá-la onde quiser.
+    Exemplo:
+
+    .hero-image {
+    background: url(img_man.jpg) no-repeat center;
+    background-size: cover;
+    height: 500px;
+    position: relative;
+    }
+
+(Propriedade CSS background-origin)
+
+    A background-originpropriedade CSS especifica onde a imagem de fundo é posicionada.
+
+    A propriedade assume três valores diferentes:
+
+        border-box - a imagem de fundo começa no canto superior esquerdo da borda
+        caixa de preenchimento - (padrão) a imagem de fundo começa no canto superior esquerdo da borda de preenchimento
+        content-box - a imagem de fundo começa no canto superior esquerdo do conteúdo
+
+    O exemplo a seguir ilustra a background-originpropriedade:
+    Exemplo:
+
+    #example1 {
+    border: 10px solid black;
+    padding: 35px;
+    background: url(img_flwr.gif);
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    }
+
+(Propriedade CSS background-clip)
+
+    A background-clippropriedade CSS especifica a área de pintura do fundo.
+
+    A propriedade assume três valores diferentes:
+
+        border-box - (padrão) o fundo é pintado na borda externa da borda
+        caixa de preenchimento - o fundo é pintado na borda externa do preenchimento
+        content-box - o fundo é pintado dentro da caixa de conteúdo
+
+    O exemplo a seguir ilustra a background-clippropriedade:
+    Exemplo:
+
+    #example1 {
+    border: 10px dotted black;
+    padding: 35px;
+    background: yellow;
+    background-clip: content-box;
+    } 

@@ -1,0 +1,111 @@
+(O seletor de id CSS)
+    
+    O seletor de id usa o atributo id de um elemento HTML para selecionar um elemento específico.
+    O id de um elemento é único dentro de uma página, então o seletor de id é usado para selecionar um elemento único!
+    Para selecionar um elemento com um id específico, escreva um caractere hash (#), seguido pelo id do elemento.
+    Exemplo
+    
+    A regra CSS abaixo será aplicada ao elemento HTML com id = "para1":
+
+    <!DOCTYPE html>
+        <html>
+        <head>
+        <style>
+        #para1 {
+        text-align: center;
+        color: red;
+        }
+        </style>
+        </head>
+        <body>
+
+        <p id="para1">Hello World!</p>
+        <p>This paragraph is not affected by the style.</p>
+
+        </body>
+        </html>
+
+        
+    #para1 {
+      text-align: center;
+      color: red;
+    }
+    
+    Nota: Um nome de id não pode começar com um número!
+    
+(O seletor de classe CSS)
+    
+    O seletor de classe seleciona elementos HTML com um atributo de classe específico.
+    Para selecionar elementos com uma classe específica, escreva um ponto (.), Seguido do nome da classe.
+    Exemplo:
+    
+    Neste exemplo, todos os elementos HTML com class = "center" serão vermelhos e alinhados ao centro:
+
+    <!DOCTYPE html>
+        <html>
+        <head>
+        <style>
+        .center {
+        text-align: center;
+        color: red;
+        }
+        </style>
+        </head>
+        <body>
+
+        <h1 class="center">Red and center-aligned heading</h1>
+        <p class="center">Red and center-aligned paragraph.</p> 
+
+        </body>
+        </html>
+
+
+    .center {
+      text-align: center;
+      color: red;
+    }
+    
+    Você também pode especificar que apenas elementos HTML específicos devem ser afetados por uma classe.
+    Exemplo:
+    
+    Neste exemplo, apenas os elementos <p> com class = "center" serão alinhados ao centro:
+
+    p.center {
+      text-align: center;
+      color: red;
+    }
+    
+    Os elementos HTML também podem se referir a mais de uma classe.
+    Exemplo:
+    
+    Neste exemplo, o elemento <p> será estilizado de acordo com class = "center" e class = "large":
+
+    <p class="center large">This paragraph refers to two classes.</p>
+    
+    Nota: o nome de uma classe não pode começar com um número!
+
+(O seletor universal CSS)
+    
+    O seletor universal (*) seleciona todos os elementos HTML na página.
+    Exemplo:
+    
+    A regra CSS abaixo afetará todos os elementos HTML na página:
+
+    * {
+      text-align: center;
+      color: blue;
+    }
+
+(ID no CSS) =  é utilizado para estruturar o site, e é aconselhavel usar apenas uma unica vez. A recomendação é que
+se você precisa de uma formatação em mais de um elemento HTML que você utilize uma
+classe. O melhor exemplo de como devemos usar classe e Id:
+
+Id = Podemos utilizar no cabeçalho do nosso site 
+Class = Podemos utilizar no corpo do site, caso nosso site tenha algumas colunas, utilizando a classe nas colunas iriamos
+ter a mesma formatação aplicada em todas as colunas.
+
+Qual a diferença entre classe e Id?
+
+Classe você pode usar mais de uma vez sempre que você formatar algo que você precise aplicar mais uma vez dentro do mesmo
+documento HTML podemos utilizr uma classe. Mas se for utilizar apenas uma única vez devemos utilizar ID, pois o ID utilizamos
+uma única vez dentro do nosso site.

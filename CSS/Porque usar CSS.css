@@ -1,0 +1,115 @@
+(O que é CSS?)
+    CSS significa C ascading S tyle S heets
+    CSS descreve como os elementos HTML devem ser exibidos na tela, no papel ou em outra mídia
+    CSS economiza muito trabalho . Ele pode controlar o layout de várias páginas da web de uma só vez
+    Folhas de estilo externas são armazenadas em arquivos CSS
+
+(Demonstração CSS - Uma página HTML - vários estilos!)
+
+    Aqui, mostraremos uma página HTML exibida com quatro folhas de estilo diferentes. Clique nos links "Folha de estilo 1", 
+    "Folha de estAilo 2", "Folha de estilo 3", "Folha de estilo 4" abaixo para ver os diferentes estilos:
+
+
+(Por que usar CSS?)
+
+    CSS é usado para definir estilos para suas páginas da web, incluindo o 
+    design, layout e variações de exibição para diferentes dispositivos e tamanhos de tela.
+
+(Sintaxe CSS)
+
+    Um conjunto de regras CSS consiste em um seletor e um bloco de declaração:
+
+
+(Classificação)
+    Estas propriedades são usadas para classificar os
+    elementos e definir como eles devem aparecer no
+    layout.
+    
+    – float,
+    – clear,
+    – display,
+    – dimensão
+
+Float:
+    • Define onde um elemento aparecerá em outro elemento
+    • Pode assumir os valores left ou right
+    • O elemento com float irá mover-se mais a esquerda ou mais a
+    direita possível
+
+    seletor {
+    float:[valor];
+    }
+
+
+
+(Ordem em Cascata)
+    
+    Qual estilo será usado quando houver mais de um estilo especificado para um elemento HTML?
+    Todos os estilos em uma página serão "cascateados" em uma nova folha de estilo "virtual" pelas seguintes regras, onde o número um tem a prioridade mais alta:
+    - Estilo embutido (dentro de um elemento HTML)
+    - Folhas de estilo externas e internas (na seção principal)
+    - Padrão do navegador
+    
+    Portanto, um estilo embutido tem a prioridade mais alta e substituirá os estilos externos e internos e os padrões do navegador.
+
+(Comentários CSS)
+    
+    Os comentários são usados ​​para explicar o código e podem ajudar quando você editar o código-fonte em uma data posterior.
+    Os comentários são ignorados pelos navegadores.
+    
+    Um comentário CSS é colocado dentro do <style>elemento e começa /*e termina com */:
+    Exemplo:
+
+    /* This is a single-line comment */
+    p {
+      color: red;
+    }
+    
+    Você pode adicionar comentários onde quiser no código:
+    Exemplo:
+
+    p {
+      color: red;  /* Set text color to red */
+    }
+    
+    Os comentários também podem abranger várias linhas: 
+    Exemplo:
+
+    /* This is
+    a multi-line
+    comment */
+    
+    p {
+      color: red;
+    }
+    Comentários HTML e CSS
+    
+    No tutorial de HTML, você aprendeu que pode adicionar comentários ao código-fonte HTML usando a <!--...--> sintaxe.
+    
+    No exemplo a seguir, usamos uma combinação de comentários HTML e CSS:
+
+    Exemplo
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <style>
+    p {
+      color: red; /* Set text color to red */
+    }
+    </style>
+    </head>
+    <body>
+    
+    <h2>My Heading</h2>
+    
+    <!-- These paragraphs will be red -->
+    <p>Hello World!</p>
+    <p>This paragraph is styled with CSS.</p>
+    <p>CSS comments are not shown in the output.</p>
+    
+    </body>
+    </html>
+
+
+
+Tudo sobre CSS https://www.w3schools.com/css/default.asp

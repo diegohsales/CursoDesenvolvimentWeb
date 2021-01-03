@@ -1,0 +1,46 @@
+(Diferença entre Div e Span)
+    A tag <div> é usada para demarcar um bloco maior de código, contendo várias tags
+    HTML, ou mesmo uma única tag, mas de tamanha grande.
+
+    Já a tag <span> é para trechos mais pontuais, menores, dentro de uma parágrafo
+    ou uma linha.
+
+    Imagine que tenho um menu composto por um logotipo e vários links, e queira prepara-lo 
+    para receber regras css posteriomente, como o exemplo abaixo:
+
+    <img src="logotipo.jpg" alt="Logotipo da Empresa" />
+    <a href="link1.html"> Link 1 </a>
+    <a href="link2.html"> Link 2 </a>
+    <a href="link3.html"> Link 3 </a>
+    <a href="link4.html"> Link 4 </a>
+    <a href="link5.html"> Link 5 </a>
+
+    Neste caso a tag mais indicada é a <div> e seu par </div>, mantendo a estrutura da seguinte forma:
+
+    <div id="menu_site">
+    <img src="logotipo.jpg" alt="Logotipo da Empresa" />
+    <a href="link1.html"> Link 1 </a>
+    <a href="link2.html"> Link 2 </a>
+    <a href="link3.html"> Link 3 </a>
+    <a href="link4.html"> Link 4 </a>
+    <a href="link5.html"> Link 5 </a>
+    </div>
+
+    Criamos um bloco de código entre as tags <div> e </div> e, a essa demarcação
+    chamamos de "menu_site" através do atributo "id" dentro da tag de abertura.
+    Agora, se quisermos criar uma regra utilizando CSS e aplicarmos a esse menu
+    ficou fácil, pois ele está identificando e demarcado pela tag <div>.
+
+    Mas, se quisermos aplicar alguma regra, como uma cor de texto diferente, por exemplo,
+    mas apenas a "uma palavra de uma frase", visando em destaca-lá, nesse caso 
+    devemos usar a tag <span>, pois estamos falando de um trecho menor de código. Outro 
+    motivo para a escolha dela é que seria uma aplicação linear (inline) e não envolvendo
+    um código que se estende por várias linhas.
+    Exemplo: 
+
+    <p> "A simplicidade é o máximo da sofisticação." <span id="destaque"> John Sculley </span></p>
+
+    Percebemos que as tags <span> e </span> estão apenas em torno do nome do autor, que é o local
+    onde desejamos aplicar a regra.
+    Outro ponto importante a se destacar como diferença entre as duas tags é que a <div> gera uma 
+    quebra de linha, enquanto a <span> não.

@@ -1,0 +1,222 @@
+(Bordas CSS)
+    Propriedades de borda CSS
+    As borderpropriedades CSS permitem que você especifique o estilo, a largura e a cor da borda de um elemento.
+
+(CSS Border Style)
+
+    A border-stylepropriedade especifica que tipo de borda exibir.
+    
+    Os seguintes valores são permitidos:
+    
+        dotted - Define uma borda pontilhada
+        dashed - Define uma borda tracejada
+        solid - Define uma borda sólida
+        double - Define uma borda dupla
+        groove- Define uma borda com sulcos 3D. O efeito depende do valor da cor da borda
+        ridge- Define uma borda 3D estriada. O efeito depende do valor da cor da borda
+        inset- Define uma borda de inserção 3D. O efeito depende do valor da cor da borda
+        outset- Define uma borda de início 3D. O efeito depende do valor da cor da borda
+        none - Não define nenhuma fronteira
+        hidden - Define uma borda oculta
+    
+
+    A border-stylepropriedade pode ter de um a quatro valores (para a borda superior, borda direita, borda inferior e borda esquerda).
+    Exemplo
+    
+    Demonstração dos diferentes estilos de borda:
+    p.dotted {border-style: dotted;}
+    p.dashed {border-style: dashed;}
+    p.solid {border-style: solid;}
+    p.double {border-style: double;}
+    p.groove {border-style: groove;}
+    p.ridge {border-style: ridge;}
+    p.inset {border-style: inset;}
+    p.outset {border-style: outset;}
+    p.none {border-style: none;}
+    p.hidden {border-style: hidden;}
+    p.mix {border-style: dotted dashed solid double;} 
+
+(Largura da Borda CSS)
+    A border-widthpropriedade especifica a largura das quatro bordas.
+
+    A largura pode ser definida como um tamanho específico (em px, pt, cm, em, etc) ou usando um dos três valores predefinidos: fino, médio ou grosso:
+    Exemplo
+
+    Demonstração das diferentes larguras de borda:
+    p.one {
+    border-style: solid;
+    border-width: 5px;
+    }
+
+    p.two {
+    border-style: solid;
+    border-width: medium;
+    }
+
+    p.three {
+    border-style: dotted;
+    border-width: 2px;
+    }
+
+    p.four {
+    border-style: dotted;
+    border-width: thick;
+    }
+
+(Cor da Borda)
+    A border-colorpropriedade é usada para definir a cor das quatro bordas.
+    A cor pode ser definida por:
+
+        nome - especifique um nome de cor, como "vermelho"
+        HEX - especifique um valor HEX, como "# ff0000"
+        RGB - especifique um valor RGB, como "rgb (255,0,0)"
+        HSL - especifique um valor HSL, como "hsl (0, 100%, 50%)"
+        transparente
+
+    Nota: Se border-colornão estiver definido, ele herda a cor do elemento.
+    Exemplo
+
+    Demonstração das diferentes cores de borda:
+    p.one {
+    border-style: solid;
+    border-color: red;
+    }
+
+    p.two {
+    border-style: solid;
+    border-color: green;
+    }
+
+    p.three {
+    border-style: dotted;
+    border-color: blue;
+    }
+
+
+(Lados da borda CSS)
+    Borda CSS - Lados Individuais
+    
+    A partir dos exemplos das páginas anteriores, você viu que é possível especificar uma borda diferente para cada lado.
+    
+    No CSS, também existem propriedades para especificar cada uma das bordas (superior, direita, inferior e esquerda):
+    Exemplo
+    p {
+      border-top-style: dotted;
+      border-right-style: solid;
+      border-bottom-style: dotted;
+      border-left-style: solid;
+    }
+
+(Propriedade de borda abreviada de CSS)
+    Borda CSS - propriedade abreviada
+    
+    Como você viu na página anterior, há muitas propriedades a serem consideradas ao lidar com bordas.
+    
+    Para encurtar o código, também é possível especificar todas as propriedades de borda individuais em uma propriedade.
+    
+    A borderpropriedade é uma propriedade abreviada para as seguintes propriedades individuais de borda:
+    
+        border-width
+        border-style (requeridos)
+        border-color
+    
+    Exemplo
+    p {
+      border: 5px solid red;
+    }
+
+(Bordas arredondadas CSS)
+
+    A border-radiuspropriedade é usada para adicionar bordas arredondadas a um elemento:
+    
+    Borda normal
+    
+    Borda redonda
+    
+    Borda arredondada
+    
+    Borda mais redonda
+    Exemplo
+    p {
+      border: 2px solid red;
+      border-radius: 5px;
+    }
+
+    Mais exemplos
+    
+    Todas as propriedades da borda superior em uma declaração
+    Este exemplo demonstra uma propriedade abreviada para definir todas as propriedades da borda superior em uma declaração.
+    
+    <style>
+        p {
+        border-style: solid;
+        border-top: thick double #ff0000;
+        }
+    </style>
+
+
+    Definir o estilo da borda inferior
+    Este exemplo demonstra como definir o estilo da borda inferior.
+    
+    <style>
+        p {border-style: solid;}
+        p.none {border-bottom-style: none;}
+        p.dotted {border-bottom-style: dotted;}
+        p.dashed {border-bottom-style: dashed;}
+        p.solid {border-bottom-style: solid;}
+        p.double {border-bottom-style: double;}
+        p.groove {border-bottom-style: groove;}
+        p.ridge {border-bottom-style: ridge;}
+        p.inset {border-bottom-style: inset;}
+        p.outset {border-bottom-style: outset;}
+    </style>
+    </head>
+    <body>
+
+
+    Definir a largura da borda esquerda
+    Este exemplo demonstra como definir a largura da borda esquerda.
+    
+    <style>
+        p {
+        border-style: solid;
+        border-left-width: 15px;
+        }
+    </style>
+
+
+    Definir a cor das quatro bordas
+    Este exemplo demonstra como definir a cor das quatro bordas. Pode ter de uma a quatro cores.
+    
+    <style>
+        p.one {
+        border-style: solid;
+        border-color: #0000ff;
+        }
+
+        p.two {
+        border-style: solid;
+        border-color: #ff0000 #0000ff;
+        }
+
+        p.three {
+        border-style: solid;
+        border-color: #ff0000 #00ff00 #0000ff;
+        }
+
+        p.four {
+        border-style: solid;
+        border-color: #ff0000 #00ff00 #0000ff rgb(250,0,255);
+        }
+    </style>
+
+
+    Definir a cor da borda direita
+    Este exemplo demonstra como definir a cor da borda direita.
+
+    <style>
+        p {
+        border-style: solid;
+        border-right-color: #ff0000;
+        }
+    </style>
